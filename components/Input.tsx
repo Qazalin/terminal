@@ -1,3 +1,4 @@
+/* 
 import styles from "styles/Components.module.css";
 import { KeyboardEvent, ReactElement, useState } from "react";
 import { Commands } from "lib";
@@ -57,4 +58,9 @@ export const Input: React.FC<ReactiveInput> = ({ enterCb }) => {
       {message ? message : null}
     </div>
   );
+  };
+  */
+
+export const Input = () => {
+  return <div>htest</div>;
 };
