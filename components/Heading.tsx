@@ -5,7 +5,7 @@ export const Heading = () => {
     <div className={styles.heading}>
       <p className={styles.intro}>gm frens</p>
       <p className={styles.intro}>
-        I'm Qazal, I'm a Web3 software engineer. I work on researching
+        I&apos;m Qazal, I&apos;m a Web3 software engineer. I work on researching
         oppurtunities in Web3, curatig delightful products and building nice
         user experiences.
       </p>
