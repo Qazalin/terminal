@@ -8,10 +8,10 @@ import { Input } from "components/Input";
 import { useState } from "react";
 
 const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
+  const [terminalLines, setTerminalLines] = useState<number>(1);
   const addNewLineCallback = () => {
     setTerminalLines((val) => val + 1);
   };
-  const [terminalLines, setTerminalLines] = useState<number>(1);
 
   return (
     <div className={styles.container}>
