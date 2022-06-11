@@ -5,8 +5,20 @@ import styles from "../styles/Home.module.css";
 import fs from "fs";
 import path from "path";
 import { Input } from "components/Input";
+import { useState, ReactElement } from "react";
 
 const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
+  const addNewLineCallback = () => {
+    console.log("my child called me");
+    setTerminalLines(
+      terminalLines.concat(<Input enterCb={addNewLineCallback} />)
+    );
+    console.log(terminalLines);
+  };
+  const [terminalLines, setTerminalLines] = useState<ReactElement[]>([
+    <Input key={Math.random()} enterCb={addNewLineCallback} />,
+  ]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +29,7 @@ const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
       <div className={styles.terminal}>
         <Ascii contents={contents} />
         <Heading />
-        <Input />
+        {terminalLines}
       </div>
     </div>
   );

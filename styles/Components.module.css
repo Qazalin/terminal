@@ -20,11 +20,6 @@
     align-items: center;
 }
 
-.main-terminal {
-    display: flex;
-    flex-direction: row;
-}
-
 
 .cursor {
     width: 15px;

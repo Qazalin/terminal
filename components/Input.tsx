@@ -1,16 +1,11 @@
 import styles from "styles/Components.module.css";
-import {
-  EventHandler,
-  KeyboardEvent,
-  KeyboardEventHandler,
-  useEffect,
-  useRef,
-  useState,
-  ChangeEvent,
-} from "react";
+import { KeyboardEvent, useState } from "react";
 import { Commands } from "lib";
 
-export const Input = () => {
+type ReactiveInput = {
+  enterCb: () => void;
+};
+export const Input: React.FC<ReactiveInput> = ({ enterCb }) => {
   const [command, setCommand] = useState("");
   const [isCommandValid, setIsCommandValid] = useState(true);
   const [message, setMessage] = useState("");
@@ -20,15 +15,17 @@ export const Input = () => {
         if (c.command === command) {
           setIsCommandValid(true);
           setMessage(c.message);
-        } else {
+        } else if (command) {
           setIsCommandValid(false);
           setMessage("command not found");
         }
       });
+      enterCb();
+      console.log("child: called my parent");
     }
   }
   return (
-    <div className={styles.mainTerminal}>
+    <div>
       <div className={styles.inputWrapper}>
         <p
           style={{
