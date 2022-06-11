@@ -10,15 +10,15 @@ import {
 // The actual terminal commands
 export type Command = {
   command: string;
-  message: () => JSX.Element;
+  message: ReactElement;
 };
 
 export const Commands: Command[] = [
-  { command: "commands", message: OutCommands },
-  { command: "stack", message: Stack },
-  { command: "about", message: About },
-  { command: "contact", message: Contact },
-  { command: "projects", message: Projects },
+  { command: "commands", message: <OutCommands /> },
+  { command: "stack", message: <Stack /> },
+  { command: "about", message: <About /> },
+  { command: "contact", message: <Contact /> },
+  { command: "projects", message: <Projects /> },
 ];
 
 // just info about the commands
