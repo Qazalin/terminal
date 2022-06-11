@@ -10,14 +10,10 @@ import { useState, ReactElement } from "react";
 const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
   const addNewLineCallback = () => {
     console.log("my child called me");
-    setTerminalLines(
-      terminalLines.concat(<Input enterCb={addNewLineCallback} />)
-    );
+    setTerminalLines((val) => val + 1);
     console.log(terminalLines);
   };
-  const [terminalLines, setTerminalLines] = useState<ReactElement[]>([
-    <Input key={Math.random()} enterCb={addNewLineCallback} />,
-  ]);
+  const [terminalLines, setTerminalLines] = useState<number>(1);
 
   return (
     <div className={styles.container}>
@@ -29,7 +25,9 @@ const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
       <div className={styles.terminal}>
         <Ascii contents={contents} />
         <Heading />
-        {terminalLines}
+        {[...Array(terminalLines)].map((x, i) => (
+          <Input key={`input-${i}`} enterCb={addNewLineCallback} />
+        ))}
       </div>
     </div>
   );
