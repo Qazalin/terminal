@@ -20,6 +20,11 @@
     align-items: center;
 }
 
+.main-terminal {
+    display: flex;
+    flex-direction: row;
+}
+
 
 .cursor {
     width: 15px;
@@ -41,6 +46,7 @@
     color: white;
     font-size: inherit;
     font-family: inherit;
+    margin-left: 5px;
 }
 
 .input:focus {
