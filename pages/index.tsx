@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 import fs from "fs";
 import path from "path";
 import { Input } from "components/Input";
-import { useState, ReactElement } from "react";
+import { useState } from "react";
 
 const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
   const addNewLineCallback = () => {

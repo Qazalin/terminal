@@ -11,28 +11,9 @@
     max-width: 500px;
 }
 
-.blue {
-    color: var(--blue);
-}
-
 .inputWrapper {
     display: flex;
     align-items: center;
-}
-
-
-.cursor {
-    width: 15px;
-    height: 30px;
-    margin-left: 5px;
-    background-color: white;
-    animation: blink .9s linear infinite;
-}
-
-@keyframes blink {
-50% {
-    opacity: 0;
-  }
 }
 
 .input {
@@ -47,4 +28,11 @@
 .input:focus {
     border: none;
     outline: none;
+}
+
+.commandsList {
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    max-width: 600px;
 }

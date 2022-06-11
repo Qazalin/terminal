@@ -1,2 +1,7 @@
 export * from "./Ascii";
 export * from "./Heading";
+export * from "./Commands";
+export * from "./Stack";
+export * from "./About";
+export * from "./Contact";
+export * from "./Projects";

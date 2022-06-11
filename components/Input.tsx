@@ -20,7 +20,7 @@ export const Input: React.FC<ReactiveInput> = ({ enterCb }) => {
         setMessage(cmd.message);
       } else if (command) {
         setIsCommandValid(false);
-        setMessage(<p>command not found</p>);
+        setMessage(<p style={{ color: "var(--red)" }}>command not found</p>);
       }
       enterCb();
       // disable the input after the user has pressed enter
