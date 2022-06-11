@@ -9,9 +9,7 @@ import { useState, ReactElement } from "react";
 
 const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
   const addNewLineCallback = () => {
-    console.log("my child called me");
     setTerminalLines((val) => val + 1);
-    console.log(terminalLines);
   };
   const [terminalLines, setTerminalLines] = useState<number>(1);
 

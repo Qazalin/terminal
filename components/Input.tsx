@@ -9,6 +9,8 @@ export const Input: React.FC<ReactiveInput> = ({ enterCb }) => {
   const [command, setCommand] = useState("");
   const [isCommandValid, setIsCommandValid] = useState(true);
   const [message, setMessage] = useState("");
+  const [disabled, setIsDisabled] = useState(false);
+
   function handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter") {
       Commands.forEach((c) => {
@@ -21,9 +23,11 @@ export const Input: React.FC<ReactiveInput> = ({ enterCb }) => {
         }
       });
       enterCb();
-      console.log("child: called my parent");
+      // disable the input after the user has pressed enter
+      setIsDisabled(true);
     }
   }
+
   return (
     <div>
       <div className={styles.inputWrapper}>
@@ -44,8 +48,8 @@ export const Input: React.FC<ReactiveInput> = ({ enterCb }) => {
           onKeyDown={(e) => handleKeyDown(e)}
           className={styles.input}
           spellCheck={false}
-          autoFocus={true}
-          onBlur={({ target }) => target.focus()}
+          disabled={disabled}
+          autoFocus
         />
       </div>
       {message ? (
