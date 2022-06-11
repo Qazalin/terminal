@@ -22,9 +22,6 @@ const Home: NextPage = () => {
       </Head>
       <div className={styles.terminal}>
         <Heading />
-        {[...Array(terminalLines)].map((_x, i) => (
-          <Input key={`input-${i}`} enterCb={addNewLineCallback} />
-        ))}
       </div>
     </div>
   );
