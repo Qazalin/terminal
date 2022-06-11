@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import styles from "styles/Components.module.css";
 
-export const Ascii: React.FC<{ contents: string[] }> = ({ contents }) => {
+export const Name: React.FC<{ contents: string[] }> = ({ contents }) => {
   return (
     <Fragment>
       {contents.map((c, i) => (

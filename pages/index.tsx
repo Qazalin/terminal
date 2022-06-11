@@ -1,5 +1,4 @@
-import { Heading } from "components";
-import { Ascii } from "components/Ascii";
+import { Heading, Name } from "components";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
@@ -22,7 +21,7 @@ const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.terminal}>
-        <Ascii contents={contents} />
+        <Name contents={contents} />
         <Heading />
         {[...Array(terminalLines)].map((_x, i) => (
           <Input key={`input-${i}`} enterCb={addNewLineCallback} />
