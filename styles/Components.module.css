@@ -1,0 +1,49 @@
+.ascii {
+    font-size: 15px;
+}
+
+.heading {
+    margin-top: 25p;
+}
+
+.intro {
+    margin-bottom: 50px;
+    max-width: 500px;
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+.cursor {
+    width: 15px;
+    height: 30px;
+    margin-left: 5px;
+    background-color: white;
+    animation: blink .9s linear infinite;
+}
+
+@keyframes blink {
+50% {
+    opacity: 0;
+  }
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.input:focus {
+    border: none;
+    outline: none;
+}

@@ -1,9 +1,10 @@
-import { Ascii } from "components";
+import { Ascii, Heading } from "components";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import fs from "fs";
 import path from "path";
+import { Input } from "components/Input";
 
 const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
   return (
@@ -15,6 +16,8 @@ const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
       </Head>
       <div className={styles.terminal}>
         <Ascii contents={contents} />
+        <Heading />
+        <Input />
       </div>
     </div>
   );
