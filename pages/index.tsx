@@ -1,4 +1,5 @@
-import { Ascii, Heading } from "components";
+import { Heading } from "components";
+import { Ascii } from "components/Ascii";
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
