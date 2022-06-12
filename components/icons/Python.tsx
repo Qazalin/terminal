@@ -2,12 +2,7 @@ import React from "react";
 
 export function PythonLogo() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20px"
-      height="20px"
-      viewBox="0 0 32 32"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.8rem" viewBox="0 0 32 32">
       <defs>
         <linearGradient
           id="A"

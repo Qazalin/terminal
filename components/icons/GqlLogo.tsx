@@ -9,7 +9,7 @@ export function GQLLogo() {
       version="1.1"
       viewBox="0 0 400 400"
       xmlSpace="preserve"
-      width="24px"
+      width="2rem"
     >
       <path
         fill="white"

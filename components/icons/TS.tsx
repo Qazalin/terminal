@@ -2,8 +2,7 @@ export function TSLogo() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
+      width="2rem"
       fill="none"
       viewBox="0 0 128 128"
     >

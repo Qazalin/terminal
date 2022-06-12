@@ -3,7 +3,7 @@ export function SolidityLogo() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 523.9 813"
-      width="10px"
+      width="1rem"
       fill="white"
     >
       <path d="M391.9 0L261.2 232.3H0L130.6 0h261.3" className="st0"></path>

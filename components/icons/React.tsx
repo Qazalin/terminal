@@ -3,8 +3,7 @@ export function ReactLogo() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="-11.5 -10.232 23 20.463"
-      width="20px"
-      height="20px"
+      width="2rem"
     >
       <circle r="2.05" fill="white"></circle>
       <g fill="none" stroke="white">
