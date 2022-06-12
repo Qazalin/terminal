@@ -1,27 +1,39 @@
-/* 
 import styles from "styles/Components.module.css";
-import { KeyboardEvent, ReactElement, useState } from "react";
-import { Commands } from "lib";
+import { KeyboardEvent, useState } from "react";
+import React from "react";
+import { OutCommands, Stack, About, Contact, Projects } from "components";
+
+type Command = { command: string; message: () => JSX.Element };
+export const ALL_COMMANDS: Command[] = [
+  { command: "commands", message: OutCommands },
+  { command: "stack", message: Stack },
+  { command: "about", message: About },
+  { command: "contact", message: Contact },
+  { command: "projects", message: Projects },
+];
+
+const Err = () => <p style={{ color: "var(--red)" }}>command not found</p>;
 
 type ReactiveInput = {
   enterCb: () => void;
 };
+
 export const Input: React.FC<ReactiveInput> = ({ enterCb }) => {
   const [command, setCommand] = useState("");
   const [isCommandValid, setIsCommandValid] = useState(true);
-  const [message, setMessage] = useState<ReactElement>();
+  const [message, setMessage] = useState<{ component: () => JSX.Element }>();
   const [disabled, setIsDisabled] = useState(false);
 
   function handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter") {
-      const cmd = Commands.find((c) => c.command === command);
+      const cmd = ALL_COMMANDS.find((c) => c.command === command);
       if (cmd) {
         // if there was a command and a message found
         setIsCommandValid(true);
-        setMessage(cmd.message);
+        setMessage({ component: cmd.message });
       } else if (command) {
         setIsCommandValid(false);
-        setMessage(<p style={{ color: "var(--red)" }}>command not found</p>);
+        setMessage({ component: Err });
       }
       enterCb();
       // disable the input after the user has pressed enter
@@ -55,12 +67,7 @@ export const Input: React.FC<ReactiveInput> = ({ enterCb }) => {
           autoFocus
         />
       </div>
-      {message ? message : null}
+      {message ? React.createElement(message.component) : null}
     </div>
   );
-  };
-  */
-
-export const Input = () => {
-  return <div>htest</div>;
 };
