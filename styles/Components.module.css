@@ -36,3 +36,17 @@
     justify-content: space-between;
     max-width: 600px;
 }
+
+.stackWrap {
+    display: flex;
+    flex-direction: column;
+}
+.stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .stack > svg {
+    margin-right: 10px;
+ }
