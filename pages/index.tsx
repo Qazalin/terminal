@@ -16,7 +16,7 @@ const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>qazalin</title>
+        <title>terminal✨</title>
         <meta name="description" content="Portfolio terminal for geeks" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
