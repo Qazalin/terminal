@@ -1,39 +1,38 @@
 html,
 body {
-/* styles */
-      padding: 0;
-      margin: 0;
-      font-family: "JetBrains Mono", monospace;
-      background-color: black;
-      color: white;
-      font-size: 20px;
+    /* styles */
+    padding: 0;
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    background-color: black;
+    color: white;
+    font-size: 20px;
 }
 
 ::selection {
-  background: white;
-  color: black;
+    background: white;
+    color: black;
 }
 a {
-  color: inherit;
-  text-decoration: none;
+    text-decoration: none;
+    color: var(--blue);
 }
 
 * {
-  box-sizing: border-box;
-  overflow-x: hidden;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 :root {
-/* colors */
-    --red:#fc514e;
-    --green:#a1cd5e;
-    --blue:#82aaff;
-    --teal1:#7fdbca;
-    --pink:#ff5874;
-    --teal2:#21c7a8;
-    --yellow:#ffcb8b;
-    --purple1:#c792ea;
-    --purple2:#ae81ff;
-    --purple3:#5e97ec;
-    --orange:#f78c6c;
-
+    /* colors */
+    --red: #fc514e;
+    --green: #a1cd5e;
+    --blue: #82aaff;
+    --teal1: #7fdbca;
+    --pink: #ff5874;
+    --teal2: #21c7a8;
+    --yellow: #ffcb8b;
+    --purple1: #c792ea;
+    --purple2: #ae81ff;
+    --purple3: #5e97ec;
+    --orange: #f78c6c;
 }

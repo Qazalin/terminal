@@ -59,14 +59,13 @@
 }
 
 .projectCard {
-    max-width: 500px;
+    width: 500px;
     background-color: #303030;
     padding: 5px 15px;
     border-radius: 12px;
     margin: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 .projectCard > a {
     text-align: center;
@@ -74,11 +73,4 @@
 
 .projectsWrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-@media (max-width: 500px) {
-    .projectsWrapper {
-        grid-template-columns: repeat(1, 1fr);
-        background-color: red;
-    }
 }
