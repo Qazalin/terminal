@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
     /* styles */
@@ -7,6 +11,7 @@ body {
     background-color: black;
     color: white;
     font-size: 20px;
+
 }
 
 ::selection {

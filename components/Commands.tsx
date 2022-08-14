@@ -8,6 +8,10 @@ export const allCommands: CommandInfo[] = [
   { cmd: "about", desc: "more about me" },
   { cmd: "contact", desc: "let's get to know each other!" },
   { cmd: "projects", desc: "may -many- side-projects" },
+  /* {
+    cmd: "coding playlist",
+    desc: "lofi and game soundtracks, ikr we chil and fight at the same time",
+  }, */
 ];
 
 export const OutCommands = () => {
