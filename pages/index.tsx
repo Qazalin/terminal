@@ -1,7 +1,6 @@
 import { Heading, Name } from "components";
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import fs from "fs";
 import path from "path";
 import { Input } from "components/Input";
@@ -14,13 +13,13 @@ const Home: NextPage<{ contents: string[] }> = ({ contents }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className="font-mono lg:max-w-7xl">
       <Head>
-        <title>terminal✨</title>
-        <meta name="description" content="Portfolio terminal for geeks" />
+        <title>terminal </title>
+        <meta name="description" content="qazalin's portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.terminal}>
+      <div className="px-4">
         <Name contents={contents} />
         <Heading />
         {[...Array(terminalLines)].map((_x, i) => (

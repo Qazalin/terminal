@@ -43,25 +43,21 @@ export const Input: React.FC<ReactiveInput> = ({ enterCb }) => {
 
   return (
     <div>
-      <div className={styles.inputWrapper}>
+      <div className="flex items-center">
         <p
-          style={{
-            color: isCommandValid ? "var(--green)" : "var(--red)",
-            fontWeight: "bold",
-            marginRight: "10px",
-          }}
+          className={`${
+            isCommandValid ? "text-green-400" : "text-rose-400"
+          } mr-4`}
         >
           {" "}
-          {"->"}{" "}
+          {">"}{" "}
         </p>
-        <p style={{ color: "var(--teal2)", fontWeight: "bold" }}>
-          you@metaverse
-        </p>
+        <p className="text-indigo-300">you@metaverse</p>
         <input
+          className="bg-transparent border-none text-white ml-3 focus:border-noe focus:outline-none"
           value={command}
           onChange={(e) => setCommand(e.target.value)}
           onKeyDown={(e) => handleKeyDown(e)}
-          className={styles.input}
           spellCheck={false}
           disabled={disabled}
           autoFocus

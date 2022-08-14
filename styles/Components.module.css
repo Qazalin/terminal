@@ -11,25 +11,6 @@
     max-width: 50%;
 }
 
-.inputWrapper {
-    display: flex;
-    align-items: center;
-}
-
-.input {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: inherit;
-    font-family: inherit;
-    margin-left: 5px;
-}
-
-.input:focus {
-    border: none;
-    outline: none;
-}
-
 .commandsList {
     display: flex;
     align-items: space-between;
